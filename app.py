@@ -54,7 +54,7 @@ if choice == "Sobre":
 
 if choice == "Auto Análise":
     st.title("Auto Análise de Câncer de Mama")
-    st.warning('**Nota:** Este aplicativo não é um substituto para a avaliação médica e que um diagnóstico adequado só pode ser feito por um profissional de saúde qualificado. Se você acha que pode ter câncer de mama baseado nesta auto avaliação, consulte um médico imediatamente.')
+    st.warning('**Nota:** Este aplicativo não é um substituto para a avaliação médica e um diagnóstico adequado só pode ser feito por um profissional de saúde qualificado. Se você acha que pode ter câncer de mama baseado nesta auto avaliação, consulte um médico imediatamente.')
     st.write('**Sintomas:**')
     st.info('Selecione os sitomas que você está sentindo para gerar uma probabilidade de câncer de mama.')
     st.write('---')
@@ -232,9 +232,13 @@ if choice == "Previsão de Diagnóstico":
 if choice == "Previsão de Conjunto de Dados":
     st.title("Previsão de Diagnóstico de Conjunto de Dados de Câncer de Mama")
     st.write('**Diagnóstico:**')
-    st.info('Faça Upload do Arquivo para Realizar as Previsões.')
+    st.info('Faça Upload do Arquivo para Realizar as Previsões ou baixe o template para criar o seu arquivo .csv.')
     st.write('---')
-
+    
+    # criei um botão para fazer o download de um template
+    if st.download_button(label='Baixar Template Para Preenchimento', data=pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cancer_de_mama/main/breast_pred_template.csv').to_csv(), file_name='template.csv', mime='text/csv'):
+        pass
+    st.write('---')
     # criei um botão para fazer o upload do arquivo
     uploaded_file = st.file_uploader("Escolha um arquivo CSV", type="csv")
     if uploaded_file is not None:
