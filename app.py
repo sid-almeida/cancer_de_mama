@@ -238,6 +238,7 @@ if choice == "Previsão de Conjunto de Dados":
     # criei um botão para fazer o download de um template
     if st.download_button(label='Baixar Template Para Preenchimento', data=pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cancer_de_mama/main/breast_pred_template.csv').to_csv(), file_name='template.csv', mime='text/csv'):
         pass
+    st.write('---')
     # criei um botão para fazer o upload do arquivo
     uploaded_file = st.file_uploader("Escolha um arquivo CSV", type="csv")
     if uploaded_file is not None:
