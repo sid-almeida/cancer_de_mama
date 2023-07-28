@@ -1,3 +1,4 @@
 [theme]
-# Theme Base
-base = "dark"
+base="dark"
+primaryColor="#b20f61"
+"
