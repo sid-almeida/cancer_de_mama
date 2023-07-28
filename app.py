@@ -54,7 +54,7 @@ if choice == "Sobre":
 
 if choice == "Auto Análise":
     st.title("Auto Análise de Câncer de Mama")
-    st.warning('**Nota:** Este aplicativo não é um substituto para a avaliação médica e que um diagnóstico adequado só pode ser feito por um profissional de saúde qualificado. Se você acha que pode ter câncer de mama baseado nesta auto avaliação, consulte um médico imediatamente.')
+    st.warning('**Nota:** Este aplicativo não é um substituto para a avaliação médica e um diagnóstico adequado só pode ser feito por um profissional de saúde qualificado. Se você acha que pode ter câncer de mama baseado nesta auto avaliação, consulte um médico imediatamente.')
     st.write('**Sintomas:**')
     st.info('Selecione os sitomas que você está sentindo para gerar uma probabilidade de câncer de mama.')
     st.write('---')
