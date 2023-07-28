@@ -232,12 +232,13 @@ if choice == "Previsão de Diagnóstico":
 if choice == "Previsão de Conjunto de Dados":
     st.title("Previsão de Diagnóstico de Conjunto de Dados de Câncer de Mama")
     st.write('**Diagnóstico:**')
-    st.info('Faça Upload do Arquivo para Realizar as Previsões.')
+    st.info('Faça Upload do Arquivo para Realizar as Previsões ou baixe o template para criar o seu arquivo .csv.')
     st.write('---')
-
-    # criei um botão para fazer o upload do arquivo
-    if st.download_button(label='Baixar Template', data=pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cancer_de_mama/main/breast_pred_template.csv').to_csv(), file_name='template.csv', mime='text/csv'):
+    
+    # criei um botão para fazer o download de um template
+    if st.download_button(label='Baixar Template Para Preenchimento', data=pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cancer_de_mama/main/breast_pred_template.csv').to_csv(), file_name='template.csv', mime='text/csv'):
         pass
+    # criei um botão para fazer o upload do arquivo
     uploaded_file = st.file_uploader("Escolha um arquivo CSV", type="csv")
     if uploaded_file is not None:
         data_pred = pd.read_csv(uploaded_file, index_col=0)
