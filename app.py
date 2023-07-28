@@ -243,6 +243,9 @@ if choice == "Previsão de Conjunto de Dados":
         st.write('---')
         st.write(data_pred)
         st.write('---')
+        # botão para fazer download do template
+    if st.download_button(label='Baixar Template', data=pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cancer_de_mama/main/breast_pred_template.csv').to_csv(), file_name='template.csv', mime='text/csv'):
+        pass
 
         # criei um botão para prever o diagnóstico
         if st.button('Prever Diagnóstico'):
