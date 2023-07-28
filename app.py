@@ -8,7 +8,7 @@ from streamlit_option_menu import option_menu
 import requests
 
 # carreguei os dados
-data = pd.read_csv('breast-cancer-model.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/sid-almeida/cancer_de_mama/main/breast-cancer-model.csv')
 
 # treinei o modelo
 X = data.drop('diagnosis', axis=1)
@@ -27,7 +27,7 @@ def log_transform(X):
 ## Criei o app
 
 with st.sidebar:
-    st.image("Brainize Tech (1).png", width=250)
+    st.image("https://github.com/sid-almeida/cancer_de_mama/blob/main/Brainize%20Tech%20(1).png?raw=true", width=250)
     st.title("Previsão de Câncer de Mama")
     choice = option_menu(
         None, ["Sobre", "Auto Análise", "Previsão de Diagnóstico", "Previsão de Conjunto de Dados",],
