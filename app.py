@@ -97,7 +97,7 @@ if choice == "Auto Análise":
         if result < 0.5:
             st.success(f'**Probabilidade de Câncer de Mama:** {result * 100:.2f} %')
             st.warning(
-                '**Nota:** Este aplicativo não é um substituto para a avaliação médica e que um diagnóstico adequado só pode ser feito por um profissional de saúde qualificado. Se você acha que pode ter câncer de mama baseado nesta auto avaliação, consulte um médico imediatamente.')
+                '**Nota:** Este aplicativo não é um substituto para a avaliação médica e um diagnóstico adequado só pode ser feito por um profissional de saúde qualificado. Se você acha que pode ter câncer de mama baseado nesta auto avaliação, consulte um médico imediatamente.')
         elif 0.5 <= result < 0.7:
             st.warning(
                 f'**Probabilidade de Câncer de Mama:** {result * 100:.2f} %\n Procure um médico para uma avaliação mais detalhada.')
