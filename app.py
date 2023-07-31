@@ -39,7 +39,7 @@ with st.sidebar:
 if choice == "Sobre":
     st.write("""
         # Câncer de mama
-        Utilizando as bibliotecas Streamlit, SCikit-Learn e Pandas. Neste aplicativo, criamos uma plataforma interativa que serve como uma ferramenta para prever o diagnóstico do tipo de câncer de mama de paciêntes baseada em dados da **OMS** coletados no estado de **Winsconsin**.
+        Utilizando as bibliotecas Streamlit, SCikit-Learn e Pandas. Neste aplicativo, criamos uma plataforma interativa que serve como uma ferramenta para prever o diagnóstico do tipo de câncer de mama de paciêntes baseada em dados coletados no estado de **Winsconsin**.
         """)
     st.write('---')
     st.write('**Sobre o App:**')
